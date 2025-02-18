@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="rps.css" rel="stylesheet">
+        <title>Game One</title>
+    </head>
+    <body>
+        <h1>Rock-Paper-Scissors</h1>
+
+        <section id="info">
+            <p class="intro">
+                Welcome to <b>my</b> Rock-Paper-Scissors game . <br>
+                Like all games, it has rules to make it fair... or do they? <br>
+               
+                <details class="rules-container">
+                    <summary>Game Rules</summary>
+                    <p>The winning rules are the same as regular rock-paper-scissors:</p>
+                    <ul>
+                        <li>Rock beats Scissors</li>
+                        <li>Scissors beats Paper</li>
+                        <li>Paper beats Rock</li>
+                    </ul>
+                    <p>Additional twists:</p>
+                    <ul>
+                        <li>Whenever you draw, both scores are deducted by one point.</li>
+                        <li>If you draw three times consecutively, the player with fewer points wins.</li>
+                    </ul>
+                </details>
+            </p>
+        </section>
+    
+        <button id="Start">Start Game</button>
+
+        <section id="flex" style="display: none;">
+            <section id="computer" >
+                <h4>Computer 🤖</h4>
+                <div class="btn-row">
+                    <fieldset>
+                        <br>
+                        <label for="cp-score">Computer's score:
+                            <input type="text" id="cp-score" value="0" readonly>
+                        </label>
+                        <label for="draw-screen">Draw counter: 
+                            <input type="text" id="draw-screen" value="0" readonly>
+                        </label>
+                        <br>
+                        <!-- Added buttons for the computer choices -->
+                        <button id="cp-rock" class="round-btn" aria-label="Rock" style="visibility: hidden;">✊🏽</button>
+                        <button id="cp-paper" class="round-btn" aria-label="Paper" style="visibility: hidden;">✋🏽</button>
+                        <button id="cp-scissors" class="round-btn" aria-label="Scissors" style="visibility: hidden;">✌🏽</button>
+                    </fieldset>
+                </div>
+            </section>
+            
+    
+            <section id="player">
+                <h4>You 👨🏽</h4>
+                <div class="btn-row">
+                    <fieldset>
+                        <button id="rock" class="round-btn" aria-label="Rock"> ✊🏽 </button>
+                        <button id="paper" class="round-btn" aria-label="Paper"> ✋🏽 </button>
+                        <button id="scissors" class="round-btn" aria-label="Scissors"> ✌🏽 </button>
+                        <br>
+                        <label for="player-score-screen">Your score:
+                            <input type="text" id="player-score-screen" value="0" >
+                        </label>
+                        <label for="display-screen">Round result :
+                            <input type="text" id="display-screen"  readonly>
+                        </label>
+                    </fieldset>
+                </div>
+            </section>
+        </section>
+        <section>
+            <button id="reset-btn" style="display:none;">Try again ?</button>
+        </section>
+        
+        <script src="rps.js"></script>
+    </body>
+</html>
